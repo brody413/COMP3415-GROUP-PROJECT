@@ -5697,20 +5697,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\parth\\.nuget\\packages\\": {}
+    "C:\\Users\\nickf\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\parth\\source\\repos\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
+      "projectUniqueName": "C:\\Users\\nickf\\IdeaProjects\\COMP-3415-GroupAssignment\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
       "projectName": "LakeshoreHotelApp",
-      "projectPath": "C:\\Users\\parth\\source\\repos\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
-      "packagesPath": "C:\\Users\\parth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\parth\\source\\repos\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\obj\\",
+      "projectPath": "C:\\Users\\nickf\\IdeaProjects\\COMP-3415-GroupAssignment\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
+      "packagesPath": "C:\\Users\\nickf\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nickf\\IdeaProjects\\COMP-3415-GroupAssignment\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\parth\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\nickf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5774,7 +5779,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
