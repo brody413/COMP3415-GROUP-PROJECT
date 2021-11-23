@@ -6,19 +6,15 @@ using System.Threading.Tasks;
 
 namespace LakeshoreHotelApp.Models
 {
-    public class Room
+    public class Employee
     {
         [Required]
-        public int RoomNumber { get; set; }
+        public int Id { get; set; }
         [Required]
-        public bool FacesLake { get; set; }
+        public string FirstName { get; set; }
         [Required]
-        public bool IsSuite { get; set; }
+        public string LastName { get; set; }
         [Required]
-        public bool RoomFilled { get; set; }
-        [Required]
-        public Customer Customers { get; set; }
-
-
+        public string Designation { get; set; }
     }
 }
