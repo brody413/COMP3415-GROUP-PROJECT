@@ -9,6 +9,8 @@ namespace LakeshoreHotelApp.Models
     public class Room
     {
         [Required]
+        public string id { get; set; }
+        [Required]
         public int RoomNumber { get; set; }
         [Required]
         public bool FacesLake { get; set; }
@@ -17,7 +19,7 @@ namespace LakeshoreHotelApp.Models
         [Required]
         public bool RoomFilled { get; set; }
         [Required]
-        public Customer Customers { get; set; }
+        public Customer Customer { get; set; }
 
 
     }

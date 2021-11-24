@@ -21,16 +21,14 @@ namespace LakeshoreHotelApp.Data
             base.OnModelCreating(builder);
 
             builder.Entity<Room>()
-                .HasOne(p => p.Customers)
+                .HasOne(r => r.Customer)
                 .WithMany(c => c.Rooms)
-                .HasForeignKey(p => p.RoomNumber)
-                .HasConstraintName("FK_Rooms_RoomNumber");
+                .HasForeignKey(r => r.id)
+                .HasConstraintName("FK_Rooms_Customer");
 
-/*            builder.Entity<Customer>()
-                .HasOne(p => p.Rooms)
-                .WithMany(c => c.Customers)
-                .HasForeignKey(p => p.Id)
-                .HasConstraintName("FK_Rooms_RoomNumber");*/
+            
+
+
         }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

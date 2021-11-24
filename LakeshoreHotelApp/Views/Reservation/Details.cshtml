@@ -10,7 +10,7 @@
 <div>
     <h4>Reservations</h4>
     <hr />
-    <dl class="row">
+@*    <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.RoomNumber)
         </dt>
@@ -44,9 +44,9 @@
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Id)
         </dt>
-    </dl>
+    </dl>*@
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit (broken until we make database)</a> |
+    @*<a asp-action="Edit" asp-route-id="@Model.Id">Edit (broken until we make database)</a> |*@
     <a asp-action="Index">Back to Home</a>
 </div>
