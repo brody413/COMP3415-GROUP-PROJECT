@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LakeshoreHotelApp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211123223643_CreateFirstTables")]
-    partial class CreateFirstTables
+    [Migration("20211124220553_initialize")]
+    partial class initialize
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -72,14 +72,21 @@ namespace LakeshoreHotelApp.Data.Migrations
 
             modelBuilder.Entity("LakeshoreHotelApp.Models.Room", b =>
                 {
-                    b.Property<string>("id")
+                    b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<bool>("FacesLake")
-                        .HasColumnType("bit");
+                    b.Property<string>("BedSize")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsSuite")
-                        .HasColumnType("bit");
+                    b.Property<string>("CustomerId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("ReservationEnd")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ReservationStart")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("RoomFilled")
                         .HasColumnType("bit");
@@ -87,7 +94,13 @@ namespace LakeshoreHotelApp.Data.Migrations
                     b.Property<int>("RoomNumber")
                         .HasColumnType("int");
 
-                    b.HasKey("id");
+                    b.Property<string>("RoomType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
 
                     b.ToTable("rooms");
                 });
@@ -296,10 +309,7 @@ namespace LakeshoreHotelApp.Data.Migrations
                 {
                     b.HasOne("LakeshoreHotelApp.Models.Customer", "Customer")
                         .WithMany("Rooms")
-                        .HasForeignKey("id")
-                        .HasConstraintName("FK_Rooms_Customer")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CustomerId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

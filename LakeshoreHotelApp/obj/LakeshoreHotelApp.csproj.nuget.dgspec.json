@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marco\\source\\repos\\brody413\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj": {}
+    "C:\\Users\\marco\\Source\\Repos\\brody413\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marco\\source\\repos\\brody413\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj": {
+    "C:\\Users\\marco\\Source\\Repos\\brody413\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marco\\source\\repos\\brody413\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
+        "projectUniqueName": "C:\\Users\\marco\\Source\\Repos\\brody413\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
         "projectName": "LakeshoreHotelApp",
-        "projectPath": "C:\\Users\\marco\\source\\repos\\brody413\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
+        "projectPath": "C:\\Users\\marco\\Source\\Repos\\brody413\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
         "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marco\\source\\repos\\brody413\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\obj\\",
+        "outputPath": "C:\\Users\\marco\\Source\\Repos\\brody413\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marco\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[3.1.21, )"
             },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.21, )"
@@ -65,6 +69,10 @@
             "Microsoft.SqlServer.SqlManagementObjects": {
               "target": "Package",
               "version": "[161.46521.71, )"
+            },
+            "Microsoft.VisualStudio.Web.BrowserLink": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
