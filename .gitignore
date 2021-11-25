@@ -348,3 +348,20 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+.vs/LakeshoreHotelApp/v16/.suo
+LakeshoreHotelApp/bin/Debug/netcoreapp3.1/LakeshoreHotelApp.Views.dll
+LakeshoreHotelApp/bin/Debug/netcoreapp3.1/LakeshoreHotelApp.Views.pdb
+LakeshoreHotelApp/bin/Debug/netcoreapp3.1/LakeshoreHotelApp.dll
+LakeshoreHotelApp/bin/Debug/netcoreapp3.1/LakeshoreHotelApp.pdb
+LakeshoreHotelApp/obj/Debug/netcoreapp3.1/LakeshoreHotelApp.RazorCoreGenerate.cache
+LakeshoreHotelApp/obj/Debug/netcoreapp3.1/LakeshoreHotelApp.Views.dll
+LakeshoreHotelApp/obj/Debug/netcoreapp3.1/LakeshoreHotelApp.Views.pdb
+LakeshoreHotelApp/obj/Debug/netcoreapp3.1/LakeshoreHotelApp.csproj.CoreCompileInputs.cache
+LakeshoreHotelApp/obj/Debug/netcoreapp3.1/LakeshoreHotelApp.csprojAssemblyReference.cache
+LakeshoreHotelApp/obj/Debug/netcoreapp3.1/LakeshoreHotelApp.dll
+LakeshoreHotelApp/obj/Debug/netcoreapp3.1/LakeshoreHotelApp.pdb
+LakeshoreHotelApp/obj/Debug/netcoreapp3.1/Razor/Views/Reservation/Delete.cshtml.g.cs
+LakeshoreHotelApp/obj/Debug/netcoreapp3.1/Razor/Views/Reservation/Details.cshtml.g.cs
+LakeshoreHotelApp/obj/Debug/netcoreapp3.1/Razor/Views/Reservation/Index.cshtml.g.cs
+LakeshoreHotelApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
