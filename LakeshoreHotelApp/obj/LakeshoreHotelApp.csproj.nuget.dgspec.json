@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bro11\\Desktop\\COMP3415-Group-Web-Project-main\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj": {}
+    "C:\\Users\\nickf\\IdeaProjects\\COMP-3415-GroupAssignment\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bro11\\Desktop\\COMP3415-Group-Web-Project-main\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj": {
+    "C:\\Users\\nickf\\IdeaProjects\\COMP-3415-GroupAssignment\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bro11\\Desktop\\COMP3415-Group-Web-Project-main\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
+        "projectUniqueName": "C:\\Users\\nickf\\IdeaProjects\\COMP-3415-GroupAssignment\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
         "projectName": "LakeshoreHotelApp",
-        "projectPath": "C:\\Users\\bro11\\Desktop\\COMP3415-Group-Web-Project-main\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
-        "packagesPath": "C:\\Users\\bro11\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bro11\\Desktop\\COMP3415-Group-Web-Project-main\\LakeshoreHotelApp\\obj\\",
+        "projectPath": "C:\\Users\\nickf\\IdeaProjects\\COMP-3415-GroupAssignment\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
+        "packagesPath": "C:\\Users\\nickf\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nickf\\IdeaProjects\\COMP-3415-GroupAssignment\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\bro11\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\nickf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -46,19 +50,37 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.10, )"
+              "version": "[3.1.21, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[3.1.10, )"
+              "version": "[3.1.21, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.10, )"
+              "version": "[3.1.21, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.10, )"
+              "version": "[3.1.21, )"
+            },
+            "Microsoft.SqlServer.SqlManagementObjects": {
+              "target": "Package",
+              "version": "[161.46521.71, )"
+            },
+            "Microsoft.VisualStudio.Web.BrowserLink": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             }
           },
           "imports": [
@@ -79,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

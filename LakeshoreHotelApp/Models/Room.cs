@@ -9,18 +9,20 @@ namespace LakeshoreHotelApp.Models
     public class Room
     {
         [Required]
-        public int Id { get; set; }
+        public string Id { get; set; }
         [Required]
         public int RoomNumber { get; set; }
         [Required]
-        public string FirstName { get; set; }
+        public bool RoomFilled { get; set; }
         [Required]
-        public string LastName { get; set; }
+        public string BedSize { get; set; }
         [Required]
-        public int PhoneNumber { get; set; }
-        [Required]
-        public string Email { get; set; }
-
+        public string RoomType { get; set; }
+        //reference to reserving customer
+        public Customer? Customer { get; set; }
+        public string customerID { get; set; }
+        public DateTime? ReservationStart { get; set; }
+        public DateTime? ReservationEnd { get; set; }
 
     }
 }
