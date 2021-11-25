@@ -4,9 +4,21 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome to Lake Shore Resort</h1>
-    <img src="/img/Lake_Simcoe_homepage.jpg" alt="homepage_img" />
-    @if (!User.Identity.IsAuthenticated) {
+    <!-- <img src="/img/Lake_Simcoe_homepage.jpg" alt="homepage_img" /> -->
+    <div id="slider">
+        <figure>
+            <img src="/img/Lake_Simcoe_homepage.jpg" alt="homepage_img">
+            <img src="/img/Two-Double-Bed.jpg" alt="beds">
+            <img src="/img/cafe.jpg" alt="cafe">
+        </figure>
+    </div>
+
+    @if (!User.Identity.IsAuthenticated)
+    {
         <h2>Get started by <a class="text-dark" asp-area="Identity" asp-page="/Account/Register">Signing up </a>or <a class="text-dark" asp-area="Identity" asp-page="/Account/Login">Login </a>!</h2>
-        }
+    }
+    <h3>Your perfect destination to spend your vacation, We have got you covered ! Explore Lake Simcoe through our amazing <a class="text-dark" asp-area="" asp-controller="Home" asp-action="PackageDeals">Deals</a> and Limited Period Offers.</h3>
 </div>
+
+
 
