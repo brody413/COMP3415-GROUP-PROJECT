@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 
 namespace LakeshoreHotelApp.Controllers
 {
@@ -29,10 +30,12 @@ namespace LakeshoreHotelApp.Controllers
             return View();
         }
 
-        // GET: CustomerReservationController/Details/5
-        public ActionResult Details(int id)
+        // GET: CustomerReservationController/Details
+        public ActionResult Details()
         {
-            return View();
+            string accountID = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            List<Room> rooms = _context.rooms.Where(r => r.Customer != null && r.Customer.Id.Equals(accountID)).ToList();
+            return View("Details", rooms);
         }
         //GET: CustomerReservationController/Create
         [HttpGet]
@@ -54,10 +57,10 @@ namespace LakeshoreHotelApp.Controllers
             dbRoom.ReservationStart = room.ReservationStart;
             dbRoom.ReservationEnd = room.ReservationEnd;
             dbRoom.RoomFilled = true;
-            //push to database and go tf home
+            //push to database and go home
             _context.Update(dbRoom);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction(nameof(Details));
 
         }
         public Room ChooseRoom(string bedSize, string roomType)
@@ -83,45 +86,48 @@ namespace LakeshoreHotelApp.Controllers
         }
 
         // GET: CustomerReservationController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<IActionResult> Edit(string id)
         {
-            return View();
+            Room room = await _context.FindAsync<Room>(id);
+            return View(room);
         }
 
         // POST: CustomerReservationController/Edit/5
-        [HttpPost]
+        [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<IActionResult> EditConfirmed(string id)
         {
-            try
+            //delete
+            Room room = await _context.rooms.FindAsync(id);
+            string RoomType = "", BedSize = "";
+            if (room != null)
             {
-                return RedirectToAction(nameof(Index));
+                RoomType = room.RoomType;
+                BedSize = room.BedSize;
+                room.RoomFilled = false;
+                room.customerID = null;
+                room.ReservationStart = room.ReservationEnd = null;
+                _context.Update(room);
+                await _context.SaveChangesAsync();
             }
-            catch
-            {
-                return View();
-            }
+
+            return await Create(new Room { RoomType = RoomType, BedSize = BedSize});
         }
 
-        // GET: CustomerReservationController/Delete/5
-        public ActionResult Delete(int id)
+        // GET: CustomerReservationController/Delete
+        public async Task<ActionResult> Delete(string id)
         {
-            return View();
-        }
+            Room room = await _context.rooms.FindAsync(id);
+            if (room != null)
+            {
+                room.RoomFilled = false;
+                room.customerID = null;
+                room.ReservationStart = room.ReservationEnd = null;
+                _context.Update(room);
+                await _context.SaveChangesAsync();
+            }
 
-        // POST: CustomerReservationController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction(nameof(Details));
         }
     }
 }

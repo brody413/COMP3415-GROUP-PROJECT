@@ -20,6 +20,7 @@ namespace LakeshoreHotelApp.Models
         public string RoomType { get; set; }
         //reference to reserving customer
         public Customer? Customer { get; set; }
+        public string customerID { get; set; }
         public DateTime? ReservationStart { get; set; }
         public DateTime? ReservationEnd { get; set; }
 
