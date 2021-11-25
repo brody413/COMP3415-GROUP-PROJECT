@@ -28,6 +28,16 @@ namespace LakeshoreHotelApp.Controllers
             return View();
         }
 
+        public IActionResult PackageDeals()
+        {
+            return View();
+        }
+
+        public IActionResult UpcomingChanges()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

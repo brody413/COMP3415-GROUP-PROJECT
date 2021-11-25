@@ -88,6 +88,7 @@ namespace LakeshoreHotelApp.Controllers
         // GET: CustomerReservationController/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
+            ViewBag.customer = GetCustomerById(User.FindFirst(ClaimTypes.NameIdentifier).Value);
             Room room = await _context.FindAsync<Room>(id);
             return View(room);
         }
@@ -95,15 +96,18 @@ namespace LakeshoreHotelApp.Controllers
         // POST: CustomerReservationController/Edit/5
         [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditConfirmed(string id)
+        public async Task<IActionResult> EditConfirmed(Room room)
         {
             //delete
-            Room room = await _context.rooms.FindAsync(id);
             string RoomType = "", BedSize = "";
+            DateTime ReservationStart = new DateTime(), ReservationEnd = new DateTime();
             if (room != null)
             {
                 RoomType = room.RoomType;
                 BedSize = room.BedSize;
+                ReservationStart = (DateTime)room.ReservationStart;
+                ReservationEnd = (DateTime)room.ReservationEnd;
+                room = await _context.rooms.FindAsync(room.Id);
                 room.RoomFilled = false;
                 room.customerID = null;
                 room.ReservationStart = room.ReservationEnd = null;
@@ -111,7 +115,7 @@ namespace LakeshoreHotelApp.Controllers
                 await _context.SaveChangesAsync();
             }
 
-            return await Create(new Room { RoomType = RoomType, BedSize = BedSize});
+            return await Create(new Room { RoomType = RoomType, BedSize = BedSize, ReservationStart = ReservationStart, ReservationEnd = ReservationEnd, customerID = User.FindFirst(ClaimTypes.NameIdentifier).Value, Customer = GetCustomerById(User.FindFirst(ClaimTypes.NameIdentifier).Value) });
         }
 
         // GET: CustomerReservationController/Delete

@@ -951,3 +951,5 @@ C:\Users\marco\Source\Repos\brody413\COMP3415-GROUP-PROJECT\LakeshoreHotelApp\bi
 C:\Users\marco\Source\Repos\brody413\COMP3415-GROUP-PROJECT\LakeshoreHotelApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 C:\Users\marco\Source\Repos\brody413\COMP3415-GROUP-PROJECT\LakeshoreHotelApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 C:\Users\marco\Source\Repos\brody413\COMP3415-GROUP-PROJECT\LakeshoreHotelApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.BrowserLink.dll
+C:\Users\marco\Source\Repos\brody413\COMP3415-GROUP-PROJECT\LakeshoreHotelApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\UpcomingChanges.cshtml.g.cs
+C:\Users\marco\Source\Repos\brody413\COMP3415-GROUP-PROJECT\LakeshoreHotelApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\PackageDeals.cshtml.g.cs

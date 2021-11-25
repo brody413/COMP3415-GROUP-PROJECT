@@ -4,9 +4,12 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
-<p>List of Your Reservations for @ViewBag.accountID</p>
-<p>Total Reservations: @Model.Count</p>
+
+<h1>List of Your Reservations for @User.Identity.Name</h1>
+<h3>Total Reservations: @Model.Count</h3>
+<button>
+    <a asp-action="Create" asp-area="Reservation">Make a new Reservation</a>
+</button>
 
 <div>
     <h4>Reservations</h4>
@@ -27,9 +30,6 @@
                 </th>
                 <th>
                     @Html.DisplayNameFor(Model => Model[0].ReservationEnd)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(Model => Model[0].Customer)
                 </th>
                 <th></th>
             </tr>
@@ -52,9 +52,6 @@
                 </td>
                 <td>
                     @room.ReservationEnd
-                </td>
-                <td>
-                    @room.Customer
                 </td>
                 @if (User.Identity.IsAuthenticated)
                 {
