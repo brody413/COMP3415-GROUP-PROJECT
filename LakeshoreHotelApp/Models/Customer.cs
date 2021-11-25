@@ -18,7 +18,7 @@ namespace LakeshoreHotelApp.Models
         public int PhoneNumber { get; set; }
         [Required]
         public string Email { get; set; }
-        //parent object refference
+        //Reference to reserved rooms
         public List<Room> Rooms { get; set; }
     }
 }

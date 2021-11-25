@@ -6,15 +6,38 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\Migrations\20211124200419_some reservation reworking.cs" />
+    <Compile Remove="Data\Migrations\20211124200419_some reservation reworking.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211124203127_some reservation reworking.cs" />
+    <Compile Remove="Data\Migrations\20211124203127_some reservation reworking.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211124204102_some reservation reworking.cs" />
+    <Compile Remove="Data\Migrations\20211124204102_some reservation reworking.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211124204752_some reservation reworking.cs" />
+    <Compile Remove="Data\Migrations\20211124204752_some reservation reworking.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211124205217_some reservation reworking.cs" />
+    <Compile Remove="Data\Migrations\20211124205217_some reservation reworking.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211124210422_some reservation reworking.cs" />
+    <Compile Remove="Data\Migrations\20211124210422_some reservation reworking.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211124213117_Reworked Customer and Room slightly.cs" />
+    <Compile Remove="Data\Migrations\20211124213117_Reworked Customer and Room slightly.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211124213606_Reworked Customer and Room slightly.cs" />
+    <Compile Remove="Data\Migrations\20211124213606_Reworked Customer and Room slightly.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211124220359_initialize.cs" />
+    <Compile Remove="Data\Migrations\20211124220359_initialize.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.21" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.21" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.21" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="161.46521.71" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 

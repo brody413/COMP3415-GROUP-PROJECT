@@ -12,33 +12,61 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-@*            <div class="form-group">
-                <label asp-for="RoomNumber" class="control-label"></label>
-                <input asp-for="RoomNumber" class="form-control" />
-                <span asp-validation-for="RoomNumber" class="text-danger"></span>
+            <div class="form-group">
+                <label asp-for="Customer.FirstName" class="control-label"></label>
+                <input readonly asp-for="Customer.FirstName" class="form-control" value="@ViewBag.customer.FirstName"/>
+                <span asp-validation-for="Customer.FirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FirstName" class="control-label"></label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
+                <label asp-for="Customer.LastName" class="control-label"></label>
+                <input readonly asp-for="Customer.LastName" class="form-control" value="@ViewBag.customer.LastName"/>
+                <span asp-validation-for="Customer.LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LastName" class="control-label"></label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
+                <label asp-for="Customer.PhoneNumber" class="control-label"></label>
+                <input readonly asp-for="Customer.PhoneNumber" class="form-control" value="@ViewBag.customer.PhoneNumber"/>
+                <span asp-validation-for="Customer.PhoneNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PhoneNumber" class="control-label"></label>
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                <label asp-for="Customer.Email" class="control-label"></label>
+                <input readonly asp-for="Customer.Email" class="form-control" value="@ViewBag.customer.Email"/>
+                <span asp-validation-for="Customer.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <label asp-for="BedSize" class="control-">Bed Size:</label>
+                <br />
+                <label>King:</label>
+                <input asp-for="BedSize" class="form-control" type="radio" value="King">
+                <label>Queen:</label>
+                <input asp-for="BedSize" class="form-control" type="radio" value="Queen">
+                <span asp-validation-for="BedSize" class="text-danger"></span>
             </div>
-*@            <div class="form-group">
-                <input type="submit" value="Create (broken until we make database)" class="btn btn-primary" />
+            <div class="form-group">
+                <label asp-for="RoomType" class="control-label">Room Type:</label>
+                <br />
+                <label>Standard Room</label>
+                <input asp-for="RoomType" class="form-control" type="radio" value="0">
+                <span asp-validation-for="RoomType" class="text-danger"></span>
+                <label>Lake Front:</label>
+                <input asp-for="RoomType" class="form-control" type="radio" value="1">
+                <label>Suite</label>
+                <input asp-for="RoomType" class="form-control" type="radio" value="2">
+                <label>Lake Front Suite</label>
+                <input asp-for="RoomType" class="form-control" type="radio" value="3">
+
+            </div>
+            <div class="form-group">
+                <label asp-for="ReservationStart" class="control-label"></label>
+                <input type="date" asp-for="ReservationStart" class="form-control" />
+                <span asp-validation-for="ReservationStart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReservationEnd" class="control-label"></label>
+                <input type="date" asp-for="ReservationEnd" class="form-control" />
+                <span asp-validation-for="ReservationEnd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary"/>
             </div>
         </form>
     </div>

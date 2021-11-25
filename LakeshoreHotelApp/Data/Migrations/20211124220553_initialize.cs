@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LakeshoreHotelApp.Data.Migrations
 {
-    public partial class CreateFirstTables : Migration
+    public partial class initialize : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -40,22 +41,30 @@ namespace LakeshoreHotelApp.Data.Migrations
                 name: "rooms",
                 columns: table => new
                 {
-                    id = table.Column<string>(nullable: false),
+                    Id = table.Column<string>(nullable: false),
                     RoomNumber = table.Column<int>(nullable: false),
-                    FacesLake = table.Column<bool>(nullable: false),
-                    IsSuite = table.Column<bool>(nullable: false),
-                    RoomFilled = table.Column<bool>(nullable: false)
+                    RoomFilled = table.Column<bool>(nullable: false),
+                    BedSize = table.Column<string>(nullable: false),
+                    RoomType = table.Column<string>(nullable: false),
+                    CustomerId = table.Column<string>(nullable: true),
+                    ReservationStart = table.Column<DateTime>(nullable: true),
+                    ReservationEnd = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_rooms", x => x.id);
+                    table.PrimaryKey("PK_rooms", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Rooms_Customer",
-                        column: x => x.id,
+                        name: "FK_rooms_customers_CustomerId",
+                        column: x => x.CustomerId,
                         principalTable: "customers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_rooms_CustomerId",
+                table: "rooms",
+                column: "CustomerId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

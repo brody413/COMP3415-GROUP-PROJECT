@@ -22,13 +22,7 @@ namespace LakeshoreHotelApp.Data
 
             builder.Entity<Room>()
                 .HasOne(r => r.Customer)
-                .WithMany(c => c.Rooms)
-                .HasForeignKey(r => r.id)
-                .HasConstraintName("FK_Rooms_Customer");
-
-            
-
-
+                .WithMany(c => c.Rooms);
         }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

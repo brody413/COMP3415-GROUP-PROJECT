@@ -108,10 +108,6 @@ namespace LakeshoreHotelApp.Areas.Identity.Pages.Account
                     Server server = new Server(new ServerConnection(conn));
                     server.ConnectionContext.ExecuteNonQuery(script);
 
-                    /*conn.Open();
-                    new SqlCommand(script, conn).ExecuteNonQuery();
-                    conn.Close();
-                    */
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
