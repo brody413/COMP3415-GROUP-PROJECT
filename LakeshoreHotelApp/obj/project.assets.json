@@ -9505,25 +9505,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nickf\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\marco\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nickf\\IdeaProjects\\COMP-3415-GroupAssignment\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
+      "projectUniqueName": "C:\\Users\\marco\\Source\\Repos\\brody413\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
       "projectName": "LakeshoreHotelApp",
-      "projectPath": "C:\\Users\\nickf\\IdeaProjects\\COMP-3415-GroupAssignment\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
-      "packagesPath": "C:\\Users\\nickf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nickf\\IdeaProjects\\COMP-3415-GroupAssignment\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\obj\\",
+      "projectPath": "C:\\Users\\marco\\Source\\Repos\\brody413\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\LakeshoreHotelApp.csproj",
+      "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marco\\Source\\Repos\\brody413\\COMP3415-GROUP-PROJECT\\LakeshoreHotelApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\nickf\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\marco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
