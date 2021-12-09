@@ -25,7 +25,13 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ContactInformation">Contact Us</a>
                         </li>
-                        @if (User.Identity.IsAuthenticated)
+
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Employee"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="Details">All Reservations</a>
+                            </li>
+                        } else if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Reservation" asp-action="Details">Reservations</a>

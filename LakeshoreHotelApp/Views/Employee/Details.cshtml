@@ -5,10 +5,10 @@
 }
 
 
-<h1>List of Your Reservations for @User.Identity.Name</h1>
+<h1>List of All Reservations</h1>
 <h3>Total Reservations: @Model.Count</h3>
 
-    <a asp-action="Create" asp-area="Reservation">Make a new Reservation</a>
+    <a asp-action="Create" asp-area="Employee">Make a new Reservation</a>
 
 <div>
     <h4>Reservations</h4>
@@ -17,6 +17,9 @@
             <tr>
                 <th>
                     @Html.DisplayNameFor(Model => Model[0].RoomNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(Model => Model[0].customerID)
                 </th>
                 <th>
                     @Html.DisplayNameFor(Model => Model[0].RoomType)
@@ -39,6 +42,9 @@
             <tr>
                 <td>
                     @room.RoomNumber
+                </td>
+                <td>
+                    @room.customerID
                 </td>
                 <td>
                     @room.RoomType
