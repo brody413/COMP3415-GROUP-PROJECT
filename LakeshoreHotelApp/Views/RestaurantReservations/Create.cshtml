@@ -1,0 +1,75 @@
+﻿@model LakeshoreHotelApp.Models.RestaurantReservation
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+<h4>Restaurant Reservation</h4>
+<h5>Make a reservation below</h5>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @if (User.IsInRole("Employee"))
+            {
+                <div class="form-group">
+                    <label asp-for="Customer" class="control-label">Customer:</label>
+                    <select asp-for="CustomerId" class="form-control" asp-items="ViewBag.Customers"></select>
+                </div>
+            }
+            else if (User.Identity.IsAuthenticated)
+            {
+                <div class="form-group">
+                    <input readonly hidden asp-for="CustomerId" class="form-control" value="@ViewBag.Customer.Id" />
+                    <span asp-validation-for="CustomerId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Customer.FirstName" class="control-label">First Name</label>
+                    <input readonly class="form-control" value="@ViewBag.Customer.FirstName" />
+                    <span asp-validation-for="Customer.FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Customer.LastName" class="control-label">Last Name</label>
+                    <input readonly class="form-control" value="@ViewBag.Customer.LastName" />
+                    <span asp-validation-for="Customer.LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Customer.PhoneNumber" class="control-label">Phone Number</label>
+                    <input readonly class="form-control" value="@ViewBag.Customer.PhoneNumber" />
+                    <span asp-validation-for="Customer.PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Customer.Email" class="control-label">Email</label>
+                    <input readonly class="form-control" value="@ViewBag.Customer.Email" />
+                    <span asp-validation-for="Customer.Email" class="text-danger"></span>
+                </div>
+            }
+            <div class="form-group">
+                <label asp-for="NumberOfGuests" class="control-label">Number of Guests</label>
+                <input asp-for="NumberOfGuests" class="form-control" />
+                <span asp-validation-for="NumberOfGuests" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReservationTime" class="control-label">Reservation Date & time</label>
+                <input asp-for="ReservationTime" class="form-control" />
+                <span asp-validation-for="ReservationTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>

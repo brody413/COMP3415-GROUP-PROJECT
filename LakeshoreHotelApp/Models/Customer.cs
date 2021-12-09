@@ -20,5 +20,6 @@ namespace LakeshoreHotelApp.Models
         public string Email { get; set; }
         //Reference to reserved rooms
         public List<Room> Rooms { get; set; }
+        public RestaurantReservation restaurantReservation { get; set; }
     }
 }

@@ -14,6 +14,7 @@ namespace LakeshoreHotelApp.Data
         public DbSet<Employee> employees { get; set; }
         public DbSet<Customer> customers { get; set; }
         public DbSet<Room> rooms { get; set; }
+        public DbSet<RestaurantReservation> RestaurantReservations {get; set;}
 
         //override model creating
         protected override void OnModelCreating(ModelBuilder builder)
@@ -24,6 +25,9 @@ namespace LakeshoreHotelApp.Data
                 .HasOne(r => r.Customer)
                 .WithMany(c => c.Rooms)
                 .HasForeignKey(r => r.customerID);
+
+            builder.Entity<RestaurantReservation>()
+                .HasOne(r => r.Customer);
         }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
