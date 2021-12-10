@@ -118,3 +118,34 @@ body {
         right: -300%;
     }
 }
+
+
+#content {
+    clear: both;
+    padding: 40px 80px 80px;
+    margin-left: 40px;
+}
+
+#content img {
+    width: 100%;
+    max-width: 400px;
+    margin-right: 40px;
+    float: left;
+    margin-bottom: 40px;
+}
+
+
+#content_two {
+    clear: both;
+    padding: 40px 80px 80px;
+    margin-left: 40px;
+}
+
+#content_two img {
+        width: 100%;
+        max-width: 400px;
+        margin-right: 40px;
+        float: right;
+        margin-bottom: 40px;
+}
+
